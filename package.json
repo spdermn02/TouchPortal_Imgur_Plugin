@@ -7,8 +7,8 @@
   "scripts": {
     "pkg-win": "pkg --targets node14-win-x64 .",
     "pkg-mac": "pkg --targets node14-macos-x64 .",
-    "build-win": "pkg --targets node14-win-x64 . && move touchportal_imgur_plugin.exe base/Windows/TPImgur/ && del Installers\\TPImgur-Win.tpp && cd base\\Windows && 7z a -tzip ../../Installers/TPImgur-Win.tpp TPImgur",
-    "build-mac": "pkg --targets node14-macos-x64 . && move touchportal_imgur_plugin base/Mac/TPImgur/ && del Installers\\TPImgur-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPImgur-Mac.tpp TPImgur"
+    "build-win": "pkg --targets node14-win-x64 . && move touchportal_imgur_plugin.exe base/Windows/TPImgur/ && del Installers\\TPImgur-Win.tpp && cd base\\Windows && 7z a -tzip ../../Installers/TPImgur-Win.tpp TPImgur && del TPImgur\\touchportal_imgur_plugin.exe",
+    "build-mac": "pkg --targets node14-macos-x64 . && move touchportal_imgur_plugin base/Mac/TPImgur/ && del Installers\\TPImgur-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPImgur-Mac.tpp TPImgur && del TPImgur\\touchportal_imgur_plugin"
 
   },
   "keywords": [
