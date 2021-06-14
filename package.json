@@ -1,0 +1,25 @@
+{
+  "name": "touchportal_imgur_plugin",
+  "version": "1.0.0",
+  "description": "Plugin for Imgur",
+  "main": "index.js",
+  "bin":"index.js",
+  "scripts": {
+    "pkg-win": "pkg --targets node14-win-x64 .",
+    "pkg-mac": "pkg --targets node14-macos-x64 .",
+    "build-win": "pkg --targets node14-win-x64 . && move touchportal_imgur_plugin.exe base/Windows/TPImgur/ && del Installers\\TPImgur-Win.tpp && cd base\\Windows && 7z a -tzip ../../Installers/TPImgur-Win.tpp TPImgur",
+    "build-mac": "pkg --targets node14-macos-x64 . && move touchportal_imgur_plugin base/Mac/TPImgur/ && del Installers\\TPImgur-Mac.tpp && cd base\\Mac && 7z a -tzip ../../Installers/TPImgur-Mac.tpp TPImgur"
+
+  },
+  "keywords": [
+    "TouchPortal",
+    "Plugin"
+  ],
+  "author": "Jameson Allen aka Spdermn02",
+  "license": "MIT",
+  "dependencies": {
+    "form-data": "^4.0.0",
+    "node-fetch": "^2.6.1",
+    "touchportal-api": "^2.1.1"
+  }
+}

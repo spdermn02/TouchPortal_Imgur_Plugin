@@ -1,0 +1,53 @@
+{
+    "sdk": 3,
+    "version": 1000,
+    "TPDiscord_Version": "1.0.0",
+    "name": "Touch Portal Imgur",
+    "id": "TouchPortal_Imgur",
+    "plugin_start_cmd": "sh %TP_PLUGIN_FOLDER%TPImgur/start_touchportal_imgur.sh",
+    "configuration": {
+        "colorDark": "#3F434A",
+        "colorLight": "#00B86F"
+    },
+    "settings": [
+        {
+            "name": "Imgur Client Id",
+            "type": "text",
+            "default": "c4edd0d87281319"
+        }
+    ],
+    "categories": [
+        {
+            "id": "imgur_plugin",
+            "name": "Imgur",
+            "imagepath": "%TP_PLUGIN_FOLDER%TPImgur/tp-imgur.png",
+            "actions": [
+                {
+                    "id": "imgur_upload_image",
+                    "prefix": "Imgur:",
+                    "name": "Upload Image",
+                    "type": "communicate",
+                    "tryInline": "true",
+                    "format": "Imgur: Upload Image {$imgur_image_file$}",
+                    "data": [
+                        {
+                            "id": "imgur_image_file",
+                            "type": "text",
+                            "label": "Image File",
+                            "default": ""
+                        }
+                    ]
+                }
+            ],
+            "events": [],
+            "states": [
+                {
+                    "id": "last_imgur_url",
+                    "type": "text",
+                    "desc": "Imgur Last Upload Url",
+                    "default": ""
+                }
+            ]
+        }
+    ]
+}
