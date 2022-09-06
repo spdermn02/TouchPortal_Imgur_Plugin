@@ -39,6 +39,8 @@ v1.0.0 - Upload an image to Imgur
 If for some reason you want to use your own client id (or we have hit a rate limit) for the upload process you will need to do the following:
 1) Create client id here: https://imgur.com/signin?redirect=https%3A%2F%2Fapi.imgur.com%2Foauth2%2Faddclient
    1) make sure to select "Anonymous usage without user authorization" when registering your application
+   2) if you are already loggged in use this link: https://api.imgur.com/oauth2/addclient
+   3) for callback url just put in `https://imgur.com` since we are using Anonymous usage
 2) in Touch Portal go to the Gear icon -> plugins -> in the dropdown select "TouchPortal Imgur"
 3) paste in your client id on top of the default one listed
 4) click Save
